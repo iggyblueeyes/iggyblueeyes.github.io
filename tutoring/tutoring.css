@@ -1,0 +1,10 @@
+body {
+    background: #333;
+    color: #fff;
+    font-family: 'Helvetica Neue', Arial, sans-serif;   
+    min-width: 350px;
+    width: 50%;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
