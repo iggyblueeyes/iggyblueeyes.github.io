@@ -5,11 +5,12 @@
     height: 90px;
     overflow: hidden;
     color: #3498db;
+    transition: all 1s;
 }
 .rotating-dashed:hover {
     color: white;
     cursor: pointer;
-    transition: all 0.5s;
+    transition: all 1s;
 }
 .dashing {
     display: block;

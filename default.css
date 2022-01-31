@@ -1,0 +1,70 @@
+html {
+    --background-color: white;
+    --paragraph-color: black;
+    --header-color: black;
+
+    --button-color: black;
+
+    --href-color: black;
+    --href-hover-color: #555;
+
+    --paragraph-size: 18px;
+}
+body {
+    background: var(--background-color);
+    color: var(--paragraph-color);
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    min-width: 350px;
+    width: 50%;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: var(--paragraph-size);
+}
+h1, h2, h3, h4, h5, h6 {
+    color: var(--header-color);
+}
+a {
+    color: var(--href-color);
+    font-weight: bold;
+}
+a:hover {
+    color: var(--href-hover-color);
+}
+button {
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: var(--paragraph-size);
+    border: 4px solid var(--button-color);
+    background: var(--background-color);
+    color: var(--button-color);
+}
+button:hover {
+    border: 4px	solid var(--button-color);;
+    background:	var(--button-color);;
+    color: var(--background-color);
+    transform: scale(1.2);
+    transition: 0.7s;
+}
+button:active {
+    border: 4px solid var(--paragraph-color);
+    background: var(--background-color);
+    color: var(--paragraph-color);
+}
+.social-button {
+    transition: 0.7s;
+}
+.social-button:hover {
+    transform: scale(1.5);
+    transition: 0.7s;
+}
+.centered {
+    display: block;
+    margin: auto;
+}
+header {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
