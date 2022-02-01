@@ -55,20 +55,28 @@ button:active {
     color: var(--paragraph-color);
     transition: 0.7s;
 }
-.social-button {
-}
-.social-button:hover {
-    transform: scale(1.5);
-    transition: 0.7s;
-}
 .centered {
     display: block;
     margin: auto;
 }
+header {
+    display: none;
+}
 header > * {
     padding-left: 5px;
 }
-.call-button {
+header > *:hover {
+    color: var(--href-hover-color);
+}
+.fa {
+    //transition: 0.7s;
+}
+.fa:hover {
+    //transform: scale(1.5);
+    //transition: 0.7s;
+    color: var(--href-hover-color);
+}
+.call-button{
     width: 200px;
 }
 .call-button:hover span {
@@ -84,3 +92,4 @@ header > * {
     color: red;
     font-weight: bold;
 }
+

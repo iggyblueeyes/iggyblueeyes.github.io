@@ -11,6 +11,7 @@ htmlFiles = [e for e in os.listdir() if ".html" in e]
 print(folders)
 print(htmlFiles)
 
-
+f = open(htmlFiles[0], "r")
+print(f.read())
 
 #os.chdir("tutoring")
