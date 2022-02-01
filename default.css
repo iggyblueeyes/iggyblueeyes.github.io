@@ -11,6 +11,9 @@ html {
     --paragraph-size: 18px;
 
     --emoji-size: 28px;
+
+    --profile-picture-size: 50px;
+    --message-margin-left: 65px;
 }
 body {
     background: var(--background-color);
@@ -92,8 +95,16 @@ header > *:hover {
     color: red;
     font-weight: bold;
 }
+.welcome {
+    padding-top: 10px;
+}
 .profile-picture {
-    width: 100px;
+    border-radius: 50%;
+    width: var(--profile-picture-size);
     float: left;
-    margin: 10px;
+    border: solid 2px black;
+    //transform: translate(0, px)
+}
+.message {
+    margin-left: var(--message-margin-left);
 }
