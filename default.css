@@ -56,7 +56,6 @@ button:active {
     transition: 0.7s;
 }
 .social-button {
-    transition: 0.7s;
 }
 .social-button:hover {
     transform: scale(1.5);
@@ -66,10 +65,8 @@ button:active {
     display: block;
     margin: auto;
 }
-header {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
+header > * {
+    padding-left: 5px;
 }
 .call-button {
     width: 200px;
