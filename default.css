@@ -9,6 +9,8 @@ html {
     --href-hover-color: #555;
 
     --paragraph-size: 18px;
+
+    --emoji-size: 28px;
 }
 body {
     background: var(--background-color);
@@ -45,13 +47,13 @@ button:hover {
     border: 4px	solid var(--button-color);;
     background:	var(--button-color);;
     color: var(--background-color);
-    transform: scale(1.2);
     transition: 0.7s;
 }
 button:active {
     border: 4px solid var(--paragraph-color);
     background: var(--background-color);
     color: var(--paragraph-color);
+    transition: 0.7s;
 }
 .social-button {
     transition: 0.7s;
@@ -69,9 +71,19 @@ header {
     flex-direction: row;
     gap: 10px;
 }
+.call-button {
+    width: 200px;
+}
 .call-button:hover span {
     display: none;
 }
 .call-button:hover:before {
-    content: 'Click to call';
+    content: 'Click to call or text';
+}
+.emoji {
+    font-size: var(--emoji-size);
+}
+.warning {
+    color: red;
+    font-weight: bold;
 }
