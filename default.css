@@ -92,4 +92,8 @@ header > *:hover {
     color: red;
     font-weight: bold;
 }
-
+.profile-picture {
+    width: 100px;
+    float: left;
+    margin: 10px;
+}
