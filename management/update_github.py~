@@ -1,0 +1,22 @@
+import os
+
+# add all files under the root directory
+
+root = ".."
+
+directoryPaths = [];
+
+def getDirectoriesInside(path):
+
+    if (path[-1] != '/'):
+        path += '/'
+        
+    directoriesInside = os.listdir(directory)
+
+    if (directoriesInside.length > 0):
+        for (directory in directoriesInside):
+            newPath = path + directory
+            directoryPaths.append(newPath)
+            getDirectoriesInside(newPath)
+
+directoryPaths
