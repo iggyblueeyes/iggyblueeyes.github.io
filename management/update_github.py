@@ -10,12 +10,8 @@ pprint.pprint(directoryPaths)
 
 for path in directoryPaths:
     for filename in os.listdir(path):
-        print(path + filename)
-        if '~' in filename:
-            print("remove")
-            os.system('rm ' + path + filename)
-        else:
-            print("add")
+        if '~' != filename[-1] and '_' != filename[0] and '.' != filename[0]:
+            print(path + filename)
             os.system('git add ' + path + filename)
     
 os.system('git commit -m "Update"')
