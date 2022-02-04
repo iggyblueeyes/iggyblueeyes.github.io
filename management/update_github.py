@@ -1,25 +1,12 @@
 import os
 import utilities
+import pprint
 
 root = ".."
 
-#directoryPaths = [];
-
-'''
-def getDirectoriesInside(path):
-    if (path[-1] != '/'):
-        path += '/'
-    directoriesInside = [x for x in os.listdir(path) if '.' not in x]
-    if (len(directoriesInside) > 0):
-        for directory in directoriesInside:
-            newPath = path + directory
-            directoryPaths.append(newPath)
-            getDirectoriesInside(newPath)
-'''
-
 directoryPaths = utilities.getDirectoriesInside(root)
 
-print(directoryPaths)
+pprint.pprint(directoryPaths)
 
 for path in directoryPaths:
     os.system('git add ' + path + '*')
