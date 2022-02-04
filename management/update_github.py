@@ -18,5 +18,5 @@ getDirectoriesInside(root)
 for path in directoryPaths:
     os.system('git add ' + path + '*')
 
-print(os.system('git commit -m "Update"'))
+os.system('git commit -m "Update"')
 os.system('git push')
