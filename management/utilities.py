@@ -10,7 +10,7 @@ def getDirectoriesInside(path, directoryPaths = []):
     directoriesInside = [x for x in os.listdir(path) if not any((c in '._') for c in x)]
     if (len(directoriesInside) > 0):
         for directory in directoriesInside:
-            newPath = path + directory
+            newPath = path + directory + '/'
             directoryPaths.append(newPath)
             getDirectoriesInside(newPath, directoryPaths)
     return directoryPaths;
