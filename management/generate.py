@@ -2,23 +2,30 @@
 This file will allow me to update all the html files at the same time.
 """
 
-import re
 import os
+import re
+import utilities
 
-#folders = [e for e in os.listdir() if "." not in e]
-#htmlFiles = [e for e in os.listdir() if ".html" in e]
+stylesFileName = "styles.css"
 
-root = ".."
+def writeHTMLFile(root, directoryPath, title):
+    bodyText = open(directoryPath + title + ".txt", "r").read()
+    # alternatively I could just count the number of fwd slashes instead of using re, but this works fine
+    stylesPath = re.sub("/.*/","/../", directoryPath[len(root):]) + stylesFileName
+    with open(directoryPath + title + ".html", "w") as file:
+        file.write("<html>\n")
+        file.write("<head>\n")
+        file.write("<link rel='stylesheet' href='"+ stylesPath + "'>")
+        file.write("</head>\n")
+        file.write("<body>\n")
+        file.write(bodyText)
+        file.write("</body>\n")
+        file.write("</html>")
 
-os.chdir(root)
+root = "../"
 
-print(os.listdir())
+directoryPaths = utilities.getDirectoriesInside(root)
 
-
-#print(folders)
-#print(htmlFiles)
-
-#f = open(htmlFiles[0], "r")
-#print(f.read())
-
-#os.chdir("tutoring")
+for directoryPath in directoryPaths:
+    for filename in utilities.getFilenamesInDirWithExt(directoryPath, ".txt"):
+        writeHTMLFile(root, directoryPath, filename)
