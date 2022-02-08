@@ -9,6 +9,7 @@ html {
     --href-hover-color: #555;
 
     --paragraph-size: 18px;
+    --header-size: 20px;
 
     --emoji-size: 28px;
 
@@ -66,7 +67,8 @@ header {
     //display: none;
 }
 header > * {
-    padding-left: 5px;
+    padding-right: 5px;
+    font-size: var(--header-size);
 }
 header > *:hover {
     color: var(--href-hover-color);
