@@ -2,7 +2,7 @@
 
 function setNav(id, url) {
     document.getElementById(id).onclick = function() {
-	window.location = url;
+	window.open(url);
     }
 }
 
