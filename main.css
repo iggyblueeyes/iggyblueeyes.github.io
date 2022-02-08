@@ -20,8 +20,8 @@ body {
     background: var(--background-color);
     color: var(--paragraph-color);
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    min-width: 350px;
-    width: 50%;
+    //max-width: 1000px;
+    //width: 50%;
     margin: auto;
     margin-top: 50px;
     margin-bottom: 50px;
